@@ -7,6 +7,8 @@ plugins {
 	kotlin("plugin.spring") version "1.6.21"
 }
 
+
+
 group = "E-Recycle"
 version = "0.0.1-SNAPSHOT"
 java.sourceCompatibility = JavaVersion.VERSION_17
@@ -28,8 +30,16 @@ tasks.withType<KotlinCompile> {
 		freeCompilerArgs = listOf("-Xjsr305=strict")
 		jvmTarget = "17"
 	}
+
+}
+
+tasks.withType<Jar> {
+  manifest {
+    attributes["Main-Class"] = "com.caco3.Main"
+  }
 }
 
 tasks.withType<Test> {
 	useJUnitPlatform()
 }
+
