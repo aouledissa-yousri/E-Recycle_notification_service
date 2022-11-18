@@ -35,6 +35,8 @@ tasks.withType<KotlinCompile> {
 
 tasks.withType<Jar> {
   enabled = false
+  archiveBaseName
+  archiveVersion
   manifest {
     attributes["Main-Class"] = "ERecycle.ERecycle_notification_service.ERecycleNotificationServiceApplicationKt"
   }
