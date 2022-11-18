@@ -35,7 +35,7 @@ tasks.withType<KotlinCompile> {
 
 tasks.withType<Jar> {
   manifest {
-    attributes["Main-Class"] = "ERecycle.ERecycle_notification_service.ERecycleNotificationServiceApplication"
+    attributes["Main-Class"] = "ERecycle.ERecycle_notification_service.Main"
   }
 }
 

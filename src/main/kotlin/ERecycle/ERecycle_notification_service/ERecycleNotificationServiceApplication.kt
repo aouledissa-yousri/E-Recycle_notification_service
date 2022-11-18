@@ -4,11 +4,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication
 import org.springframework.boot.runApplication
 
 @SpringBootApplication
-class ERecycleNotificationServiceApplication {
-  fun main(args: Array<String>) {
-    runApplication<ERecycleNotificationServiceApplication>(*args)
-  }
-}
+class ERecycleNotificationServiceApplication
 
 fun main(args: Array<String>) {
 	runApplication<ERecycleNotificationServiceApplication>(*args)
