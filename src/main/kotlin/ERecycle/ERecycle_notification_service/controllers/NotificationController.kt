@@ -26,7 +26,7 @@ class NotificationController {
 
   @PostMapping("/addMakeRecycleRequestNotification/")
   @CheckAccessToken
-  public fun addMakeRecycleRequestNotification(@RequestHeader headers: Map<String, String>, @RequestBody payload: Map<String, Map<String, Any>>): Any? {
+  public fun addMakeRecycleRequestNotification(@RequestBody payload: Map<String, Any>, @RequestHeader headers: Map<String, String>): Any? {
     return NotificationService.addMakeRecycleRequestNotification(headers, Gson().fromJson(Gson().toJsonTree(payload).asJsonObject, AddMakeRecycleRequestNotificationPayload::class.java))
   }
 
@@ -39,7 +39,7 @@ class NotificationController {
   @PostMapping("/addValidateRecycleRequestNotification/")
   @CheckAccessToken
   public fun addValidateRecycleRequestNotification(@RequestHeader headers: Map<String, String>, @RequestBody payload: Map<String, Any>): Any? {
-    return NotificationService.addCompleteRecycleRequestNotification(headers, Gson().fromJson(Gson().toJsonTree(payload).asJsonObject, AddCompleteValidateRecycleRequestNotificationPayload::class.java))
+    return NotificationService.addValidateRecycleRequestNotification(headers, Gson().fromJson(Gson().toJsonTree(payload).asJsonObject, AddCompleteValidateRecycleRequestNotificationPayload::class.java))
   }
 
   @PatchMapping("/checkNotifications/")
